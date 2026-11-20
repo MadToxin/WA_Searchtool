@@ -1,0 +1,10 @@
+\babel@toc {finnish}{}\relax 
+\contentsline {section}{\numberline {1}Preamble}{1}{}%
+\contentsline {section}{\numberline {2}Perusidea}{1}{}%
+\contentsline {section}{\numberline {3}Suunnitelma}{2}{}%
+\contentsline {subsection}{\numberline {3.1}Tiedostojen löytäminen}{2}{}%
+\contentsline {subsection}{\numberline {3.2}Toiminto 1: Kategoriaesitys}{2}{}%
+\contentsline {subsection}{\numberline {3.3}Toiminto 2: Kronologinen järjestely}{2}{}%
+\contentsline {subsection}{\numberline {3.4}Toiminto 3: Sanamäärä}{2}{}%
+\contentsline {subsection}{\numberline {3.5}Toiminto 4: Linkatut artikkelit}{3}{}%
+\contentsline {section}{\numberline {4}Aikataulu}{3}{}%

@@ -1,0 +1,40 @@
+\documentclass[finnish,11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{thmtools}
+\usepackage{nameref}
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage{systeme}
+\title{Ohjelmoinnin Harjoitustyö}
+\author{Otso Närväinen, Niko Korhonen}
+\begin{document}
+	\maketitle
+	\tableofcontents
+	\section{Preamble}
+		World Anvil on selainpohjainen fiktion kirjoitusalusta. Sinne voi tehdä \textbf{maailman} (fiktiivisen maailman), johon voi kirjoittaa \textbf{artikkeleita}, wikipedia-tyylisesti. Artikkeleissa on erilaisia tekstikenttiä ja tietoja (esim. maailman sisäinen vuosi tai väestömäärä) sekä metadataa (esim. luontipäivämäärä ja sanamäärä). Nämä artikkelit lajitellaan kategorioihin, joissa voi olla sisällä kategorioita. \\\\
+		Kaiken, mitä johonkin maailmaan on kirjoitettu, voi saada ladattua kansioihin jaeteltuna ja yksittäisinä tiedostoina. Esimerkiksi jokaisen artikkelin tiedostossa on kaikki tekstikentät ja niiden sisällöt, metadata, paikka kategoriajärjestyksessä, ja selaimen käyttämät tunnukset ja osoitteet. 
+	\section{Perusidea}
+		Tämän työn pohja-ajatuksena olisi tehdä ohjelma, joka osaa lukea näitä tiedostoja ja antaa erilaisia tietoja niistä. Ohjelma tulee olemaan päättessä pyörivä tekstipohjainen C:llä kirjoitettu ohjelma. Se kysyy kansion tiedostosijaintia, ja esittää jonkun valikon jossa on eri toimintoja. Nämä tekevät mitä tekevät, ja tuottavat lopputuloksen, joko suoraan tulostaen tai erilliseen tekstitiedostoon. 
+	\section{Suunnitelma}
+		Projektissa on neljä pääasiaa, mitkä tulisi tehdä, listattu alla. Versionhallintaan käytetään GitHubia. Tärkeimmät kirjastot tässä ovat stdio.h, tietenkin, ja stdlib.h tiedostojen lukuun ja kirjoitukseen. Tiedostot ovat JSON-tiedostoja, joten json.h on hyödyllinen niiden käsittelemiseen. Se on ulkoinen kirjasto, mutta sen saa sisällytettyä projektiin.\\\\
+		Kaikenlaiset tilanteet, joissa käyttäjä syöttää jonkun tekstin (yleensä nimen) tulisi pystyä suosittelemaan lähellä olevia vaihtoehtoja, jos syöttö on puutteellinen tai väärin. 
+	\subsection{Tiedostojen löytäminen}
+		Ensimmäinen toiminto tulee olla tiedostojen sijaintien lukeminen ja kerääminen yhteen tiedostoon. Paras tapa on todennäköisesti luoda tekstitiedostoja; yksi artikkeleille, yksi kategorioille, jne. Artikkeleille esim. on jokainen artikkeli omalla rivillään, jossa nimi, tunnus, osoite, kategoria missä se on, ja tiedostosijainti. Muut toiminnot voivat sitten käyttää näitä listoja.
+	\subsection{Toiminto 1: Kategoriaesitys}
+		Yksinkertaisesti esitetään koko maailman kategoriajärjestelyt miten ne on tehty, ja sisällä olevat artikkelit. 
+	\subsection{Toiminto 2: Kronologinen järjestely}
+		Tietyissä artikkelityypeissä on kenttä maailmansisäiselle ajalle (vuosina). Näiden perusteella voidaan lajitella ne aikajärjestykseen. Tähän toimintoon voisi pistää lisää lajitteluvaihtoehtoja; uusimmasta vanhimpaan (ja kuinka monta artikkelia näytetään) tai tietyltä aikaväliltä. Voidaan myös sisällyttää historiatapahtumia (eri tietotyyppi, jolle on omat systeemit, mutta silti olemassa ja käytettävissä)
+	\subsection{Toiminto 3: Sanamäärä}
+		Lajittelu sanamäärän mukaan. Samanlaiset vaihtoehdot voi olla kuin toiminto 2:ssa. 
+	\subsection{Toiminto 4: Linkatut artikkelit}
+		Artikkeleja voi linkata toisiinsa tekstin sisällä ja tietyissä kentissä. Nämä toimivat tunnusten perusteella, joten ne voidaan myös lukea suhteellisen helposti. Toiminto listaa jonkun valitun artikkelin (joko nimen tai tunnuksen kautta) linkatut artikkelit, joko siinä mainitut tai sitä mainitsevat. 
+	\section{Aikataulu}
+		Karkeasti (voi muuttua tilanteen mukaan):\\
+		Viikko 1; suunnittelua ja eri tarvittavien asioiden (varsinkin json.h) tutkimista\\
+		Seuraava väli; eri toiminnot, ensin tiedostojen löytämistoiminti\\
+		Loppu hiomista ja testaamista.
+\end{document}
